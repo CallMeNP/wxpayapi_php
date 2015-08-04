@@ -22,10 +22,10 @@ class WxPayConfig
 	 * 获取地址：https://mp.weixin.qq.com/advanced/advanced?action=dev&t=advanced/dev&token=2005451881&lang=zh_CN
 	 * @var string
 	 */
-	const APPID = config('services.wxpay.appid');
-	const MCHID = config('services.wxpay.mchid');
-	const KEY = config('services.wxpay.key');
-	const APPSECRET = config('services.wxpay.appsecret');
+	const APPID = 'wx426b3015555a46be';
+	const MCHID = '1225312702';
+	const KEY = 'e10adc3949ba59abbe56e057f20f883e';
+	const APPSECRET = '01c6d59a3f9024db6336662ac95c8e74';
 	
 	//=======【证书路径设置】=====================================
 	/**
@@ -34,8 +34,8 @@ class WxPayConfig
 	 * API证书下载地址：https://pay.weixin.qq.com/index.php/account/api_cert，下载之前需要安装商户操作证书）
 	 * @var path
 	 */
-	const SSLCERT_PATH = config('services.wxpay.sslcert_path');
-	const SSLKEY_PATH = config('services.wxpay.sslkey_path');
+	const SSLCERT_PATH = '../cert/apiclient_cert.pem';
+	const SSLKEY_PATH = '../cert/apiclient_key.pem';
 	
 	//=======【curl代理设置】===================================
 	/**
@@ -44,8 +44,8 @@ class WxPayConfig
 	 * 默认CURL_PROXY_HOST=0.0.0.0和CURL_PROXY_PORT=0，此时不开启代理（如有需要才设置）
 	 * @var unknown_type
 	 */
-	const CURL_PROXY_HOST = config("services.wxpay.curl_proxy_host");//"10.152.18.220";
-	const CURL_PROXY_PORT = config("services.wxpay.curl_proxy_port");//8080;
+	const CURL_PROXY_HOST = "0.0.0.0";//"10.152.18.220";
+	const CURL_PROXY_PORT = 0;//8080;
 	
 	//=======【上报信息配置】===================================
 	/**
@@ -55,5 +55,5 @@ class WxPayConfig
 	 * 上报等级，0.关闭上报; 1.仅错误出错上报; 2.全量上报
 	 * @var int
 	 */
-	const REPORT_LEVENL = config('services.wxpay.report_levenl');
+	const REPORT_LEVENL = 1;
 }
