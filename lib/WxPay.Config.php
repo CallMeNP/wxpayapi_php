@@ -1,5 +1,18 @@
 <?php
 /**
+ * 为了尽量不修改官方sdk代码，并使用laravel的config，定义如下宏。
+ */
+define('WXPAY_APPID', config('services.wxpay.appid'));
+define('WXPAY_MCHID', config('services.wxpay.mchid'));
+define('WXPAY_KEY', config('services.wxpay.key'));
+define('WXPAY_APPSECRET', config('services.wxpay.appsecret'));
+define('WXPAY_SSLCERT_PATH', config('services.wxpay.sslcert_path'));
+define('WXPAY_SSLKEY_PATH', config('services.wxpay.sslkey_path'));
+define('WXPAY_CURL_PROXY_HOST', config('services.wxpay.curl_proxy_host'));
+define('WXPAY_CURL_PROXY_PORT', config('services.wxpay.curl_proxy_port'));
+define('WXPAY_REPORT_LEVENL', config('services.wxpay.report_levenl'));
+
+/**
 * 	配置账号信息
 */
 
@@ -22,10 +35,10 @@ class WxPayConfig
 	 * 获取地址：https://mp.weixin.qq.com/advanced/advanced?action=dev&t=advanced/dev&token=2005451881&lang=zh_CN
 	 * @var string
 	 */
-	const APPID = config('services.wxpay.appid');
-	const MCHID = config('services.wxpay.mchid');
-	const KEY = config('services.wxpay.key');
-	const APPSECRET = config('services.wxpay.appsecret');
+	const APPID = WXPAY_APPID;
+	const MCHID = WXPAY_MCHID;
+	const KEY = WXPAY_KEY;
+	const APPSECRET = WXPAY_APPSECRET;
 	
 	//=======【证书路径设置】=====================================
 	/**
@@ -34,8 +47,8 @@ class WxPayConfig
 	 * API证书下载地址：https://pay.weixin.qq.com/index.php/account/api_cert，下载之前需要安装商户操作证书）
 	 * @var path
 	 */
-	const SSLCERT_PATH = config('services.wxpay.sslcert_path');
-	const SSLKEY_PATH = config('services.wxpay.sslkey_path');
+	const SSLCERT_PATH = WXPAY_SSLCERT_PATH;
+	const SSLKEY_PATH = WXPAY_SSLKEY_PATH;
 	
 	//=======【curl代理设置】===================================
 	/**
@@ -44,8 +57,8 @@ class WxPayConfig
 	 * 默认CURL_PROXY_HOST=0.0.0.0和CURL_PROXY_PORT=0，此时不开启代理（如有需要才设置）
 	 * @var unknown_type
 	 */
-	const CURL_PROXY_HOST = config("services.wxpay.curl_proxy_host");//"10.152.18.220";
-	const CURL_PROXY_PORT = config("services.wxpay.curl_proxy_port");//8080;
+	const CURL_PROXY_HOST = WXPAY_CURL_PROXY_HOST;//"10.152.18.220";
+	const CURL_PROXY_PORT = WXPAY_CURL_PROXY_PORT;//8080;
 	
 	//=======【上报信息配置】===================================
 	/**
@@ -55,5 +68,5 @@ class WxPayConfig
 	 * 上报等级，0.关闭上报; 1.仅错误出错上报; 2.全量上报
 	 * @var int
 	 */
-	const REPORT_LEVENL = config('services.wxpay.report_levenl');
+	const REPORT_LEVENL = WXPAY_REPORT_LEVENL;
 }
