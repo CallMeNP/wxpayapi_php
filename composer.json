@@ -1,0 +1,17 @@
+{
+    "name": "callmenp/wxpayapi_php",
+    "description": "微信支付api，php版。本package尽量保持官方sdk代码和使对autoload做处理。",
+    "authors": [{
+        "name": "callmenp",
+        "email": "np.liamg@gmail.com"
+    }],
+    "require": {},
+    "autoload": {
+        "classmap": [
+            "lib/",
+            "example/WxPay.JsApiPay.php",
+            "example/WxPay.MicroPay.php",
+            "example/WxPay.NativePay.php"
+        ]
+    }
+}
