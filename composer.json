@@ -1,6 +1,6 @@
 {
     "name": "callmenp/wxpayapi_php",
-    "description": "微信支付api，php版。本package尽量保持官方sdk代码和使对autoload做处理。",
+    "description": "weixin pay, api, php version.",
     "authors": [{
         "name": "callmenp",
         "email": "np.liamg@gmail.com"
